@@ -8,7 +8,7 @@ Ishwor Giri & Muhammad Shahzaib Tahir Awan
 
 
 ```bash
-#Install Virtual Environment
+#Install Virtual Environment first 
 python3 -m pip install --user virtualenv
 
 # Creating a virtual environment
@@ -28,6 +28,16 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install django.
 python -m pip install Django
 ```
 
+or 
+```
+python -m pip install -r requirements.txt
+```
+
+
+Change Directory to the project 
+```
+cd beergame
+```
 
 Database Migration
 
