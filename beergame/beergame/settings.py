@@ -123,7 +123,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-        BASE_DIR / "assets",]
-
 django_heroku.settings(locals())
