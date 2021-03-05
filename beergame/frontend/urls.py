@@ -19,18 +19,15 @@ from django.urls import path,include,re_path
 from django.conf import settings
 from django.conf.urls.static import static
 
-import frontend.views as gv
+from .views import home_view
 
 """
 Routing URLS with respective views
 """
 
 urlpatterns = [
-    path('', gv.home_view),
-    path('api/', include('api.urls')),
+    path('', home_view),
 
-    path('admin/', admin.site.urls),
-    path('<any>', gv.error_view),
    # re_path(r'^',gv.error_view),
 ]
 
