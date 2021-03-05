@@ -26,11 +26,10 @@ Routing URLS with respective views
 """
 
 urlpatterns = [
-    path('', gv.home_view),
+    path('', include('frontend.urls')),
     path('api/', include('api.urls')),
 
     path('admin/', admin.site.urls),
-    path('<any>', gv.error_view),
    # re_path(r'^',gv.error_view),
 ]
 

@@ -26,8 +26,7 @@ Routing URLS with respective views
 """
 
 urlpatterns = [
-    path('', home_view),
-
+    re_path(r'^', home_view),
    # re_path(r'^',gv.error_view),
 ]
 
