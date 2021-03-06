@@ -7,6 +7,13 @@ import HomePage from "./Homepage";
 import Navi from "./Navi";
 import Login from "./Login";
 import Signup from "./Signup";
+import PlayerView from "./PlayerView"
+import InstructorView from "./InstructorView"
+import InstructorCreateGame from "./InstructorCreateGame"
+import PlayerCreateGame from "./PlayerCreateGame"
+import PlayerChooseRole from "./PlayerChooseRole"
+import GameView from "./GameView";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -26,9 +33,36 @@ class App extends Component {
                   <Route path="/login">
                     <Login />
                   </Route>
+                  <Route exact path="/player">
+                    <PlayerView />
+                  </Route>
+
+                  <Route exact path="/instructor">
+                    <InstructorView />
+                  </Route>
+
+                  <Route exact path="/instructor/creategame">
+                    <InstructorCreateGame />
+                  </Route>
+                  
+                  <Route exact path="/player/creategame">
+                    <PlayerCreateGame />
+                  </Route>  
+
+                  <Route exact path="/play">
+                    <GameView />
+                  </Route>  
+
+                  <Route exact path="/player/chooserole">
+                    <PlayerChooseRole />
+                  </Route> 
+                  
                   <Route path="/signup">
                     <Signup />
                   </Route>
+
+
+
                   <Route exact path="/">
                     <HomePage />
                   </Route>

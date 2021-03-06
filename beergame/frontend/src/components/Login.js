@@ -13,7 +13,7 @@ export default class Login extends Component {
     return (
       <div className="container">
         <div className="bg-light p-5 rounded">
-          <form method="PSOT" action="/api/login">
+          <form method="POST" action="/api/login">
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">
                 Email address
