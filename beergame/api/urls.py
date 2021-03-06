@@ -28,4 +28,7 @@ Routing URLS with respective views
 urlpatterns = [
     path('', api.apiland),
     path('1', api.apiland),
+    path('login',api.loginvalidate),
+    re_path(r'^', api.apierror),
+
 ]

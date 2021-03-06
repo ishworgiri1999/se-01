@@ -1,5 +1,5 @@
 import React, { Component } from "react";
- import {Button}  from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 
 export default class HomePage extends Component {
   constructor(props) {
@@ -9,19 +9,14 @@ export default class HomePage extends Component {
   render() {
     return (
       <div>
-        {/* <h1> hinder </h1> */}
-        <Button variant="primary">Primary</Button>
-        <Button variant="primary">Primary</Button>
-        <Button variant="primary">Primary</Button>
-        <Button variant="primary">Primary</Button>
-        <Button variant="primary">asas</Button>
-        <Button variant="primary">Primary</Button>
-        <Button variant="primary">Primary</Button>
-        <Button variant="primary">Primary</Button>
-        <Button variant="primary">Primary</Button>
-        <Button variant="primary">Primary</Button>
-        <Button variant="primary">Primary</Button>
-
+        <Container>
+        <div className="bg-light p-5 rounded">
+        <h1>Welcome to Beer Game</h1>
+        <p className="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+        <a className="btn btn-lg btn-primary" href="/player/" role="button">Player</a>
+        <a className="btn btn-lg btn-primary" href="/instructor/" role="button">Instructor</a>
+      </div>
+        </Container>
       </div>
     );
   }
