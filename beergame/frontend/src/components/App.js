@@ -3,16 +3,27 @@ import { render } from "react-dom";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import HomePage from "./Homepage";
-//import Navi from "./Navi";
 import Navi from "./Navi";
 import Login from "./Login";
 import Signup from "./Signup";
-import PlayerView from "./PlayerView"
-import InstructorView from "./InstructorView"
-import InstructorCreateGame from "./InstructorCreateGame"
-import PlayerCreateGame from "./PlayerCreateGame"
-import PlayerChooseRole from "./PlayerChooseRole"
+import PlayerView from "./PlayerView";
+import InstructorView from "./InstructorView";
+import InstructorCreateGame from "./InstructorCreateGame";
+import PlayerCreateGame from "./PlayerCreateGame";
+import PlayerChooseRole from "./PlayerChooseRole";
+import PlayGameView from "./PlayGame";
+import GameEdit from "./GameEdit";
 import GameView from "./GameView";
+
+
+/**
+ * General component description.
+ * You can even use the native Markdown here.
+ * E.g.:
+ * ```html
+ * <MyComponent foo={541} />
+ * ```
+ */
 
 class App extends Component {
   constructor(props) {
@@ -44,24 +55,35 @@ class App extends Component {
                   <Route exact path="/instructor/creategame">
                     <InstructorCreateGame />
                   </Route>
-                  
+
                   <Route exact path="/player/creategame">
                     <PlayerCreateGame />
-                  </Route>  
+                  </Route>
 
                   <Route exact path="/play">
-                    <GameView />
-                  </Route>  
+                    <PlayGameView />
+                  </Route>
 
                   <Route exact path="/player/chooserole">
                     <PlayerChooseRole />
-                  </Route> 
-                  
+                  </Route>
+
+
+                  <Route exact path="/game/modify/:gid">
+                    <GameEdit />
+                  </Route>
+
+                  <Route exact  path="/game/details/:gid" >
+                    <GameView />
+                  </Route>
+
                   <Route path="/signup">
                     <Signup />
                   </Route>
 
-
+                  <Route exact path="/about">
+                    <h1>about us nothing</h1>
+                  </Route>
 
                   <Route exact path="/">
                     <HomePage />
@@ -77,6 +99,3 @@ class App extends Component {
 }
 
 export default App;
-
-const appDiv = document.getElementById("app");
-render(<App />, appDiv);
