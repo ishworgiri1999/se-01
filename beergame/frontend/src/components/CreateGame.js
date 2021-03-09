@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class InstructorCreateGame extends Component {
+export default class CreateGame extends Component {
   constructor(props) {
     super(props);
   }
@@ -23,7 +23,7 @@ export default class InstructorCreateGame extends Component {
                   type="checkbox"
                   id="check1" 
                 />
-                <label className="form-check-label" for="check1">
+                <label className="form-check-label" htmlFor="check1">
                   Enable Wholesaler
                 </label>
               </div>
@@ -35,7 +35,7 @@ export default class InstructorCreateGame extends Component {
                   type="checkbox"
                   id="check2" 
                 />
-                <label className="form-check-label" for="check2">
+                <label className="form-check-label" htmlFor="check2">
                   Enable Retailer
                 </label>
               </div>
@@ -47,7 +47,7 @@ export default class InstructorCreateGame extends Component {
                     type="checkbox"
                     id="check3" 
                   />
-                  <label className="form-check-label" for="check3">
+                  <label className="form-check-label" htmlFor="check3">
                     Share Activity to Other Players
                   </label>
                 </div>
@@ -101,7 +101,7 @@ export default class InstructorCreateGame extends Component {
                 name="pattern"
                 aria-label="Default select example"
               >
-                <option selected>Open this select menu</option>
+                <option defaultValue="0">Open this select menu</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>

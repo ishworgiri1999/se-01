@@ -14,8 +14,9 @@ export default class HomePage extends Component {
         <div className="bg-light p-5 rounded">
         <h1>Welcome to Beer Game </h1> 
         <p className="lead">Beer Game is a supply-management game. Choose your Role</p>
-        <a className="btn btn-lg btn-primary ms-3" href="/player/" role="button">Player</a>
-        <a className="btn btn-lg btn-primary ms-3" href="/instructor/" role="button">Instructor</a>
+        <Link className="btn btn-lg btn-primary ms-3" to="/player/"> Player</Link>
+        <Link className="btn btn-lg btn-primary ms-3" to="/instructor/"> Instructor</Link>
+
       </div>
         </Container>
       </div>

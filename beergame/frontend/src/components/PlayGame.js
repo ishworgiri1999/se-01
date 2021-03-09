@@ -27,6 +27,15 @@ export default class PlayGameView extends Component {
 }
 
 function View1() {
+
+  function handlesubmit(){
+    // Handle submit here 
+      var amount= document.getElementById('inpnum1')
+
+      alert(amount.value)
+
+  }
+
   return (
     <div className=" ">
       <div className="row text-center">
@@ -103,6 +112,7 @@ function View1() {
               className="btn btn-outline-secondary"
               type="button"
               id="button-addon2"
+              onClick={handlesubmit}
             >
               SEND
             </button>

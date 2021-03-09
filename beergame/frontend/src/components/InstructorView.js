@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 
-export default class InstructorView extends Component {
+export  default class InstructorView extends Component {
   constructor(props) {
     super(props);
 
@@ -19,19 +20,20 @@ export default class InstructorView extends Component {
             <div className="bg-light p-5 rounded">
             
                   <div className="mb-3">
-                    <a
-                      class="btn btn-primary"
-                      href="./creategame"
+                    <Link
+                      className="btn btn-primary"
+                      to="/creategame"
                       role="button"
                     >
                       Create Game
-                    </a>
+                    </Link>
                   </div>
                   <div className="mb-3">
-                    <a class="btn btn-primary" href="/" role="button">
+                    <Link className="btn btn-primary" to="./demandpattern" role="button">
                       Create Demand Pattern
-                    </a>
+                    </Link> not implemented yet
                   </div>
+
 
                   <h3>Created Games</h3>
 
@@ -62,7 +64,7 @@ export default class InstructorView extends Component {
 
 
 
-function GameInfo(props) {
+ function GameInfo(props) {
   var id = props.id;
   return (
     <tr>
@@ -70,25 +72,26 @@ function GameInfo(props) {
       <td>4</td>
       <td>Running</td>
       <td>
-        <a
+        <Link
           name=""
           id=""
           className="btn btn-sm btn-primary ms-1"
-          href={`/game/modify/${props.id}`}
+          to={`/game/modify/${props.id}`}
           role="button"
         >
           MODIFY
-        </a>
-        <a
+        </Link>
+        <Link
           name=""
           id=""
           className="btn btn-sm btn-primary ms-1"
-          href={"/game/details/" + props.id}
+          to={"/game/details/" + props.id}
           role="button"
         >
           VIEW DETAILS
-        </a>
+        </Link>
       </td>
     </tr>
   );
 }
+

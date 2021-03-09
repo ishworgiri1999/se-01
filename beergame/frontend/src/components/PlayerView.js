@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class PlayerView extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ export default class PlayerView extends Component {
                 name="password"
               />
             </div>
-            <a class="btn btn-primary" href="./chooserole" role="button">Choose Role</a>
+            <Link className="btn btn-primary" to="/player/chooserole" >Choose Role</Link>
               </form>   
             </div>
           </div>
@@ -49,23 +50,28 @@ export default class PlayerView extends Component {
 
         
           <div className="col">
-          <div class="p-3 border bg-light">
+          <div className="p-3 border bg-light">
           <h5>Current Game: </h5>
           <table className="table">
         <thead>
           <tr>
             <th scope="col">Game ID</th>
             <th scope="col">Role</th>
+            <th scope="col">Option</th>
+
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>1</td>
             <td>Manufacturer</td>
+            <td><Link className="btn btn-primary btn-sm" to ='/play'>Join</Link></td>
+
           </tr>
         </tbody>
       </table>
       </div>
+      <Link to="/creategame">Player Create Game</Link>
           </div>
         </div>
       </div>

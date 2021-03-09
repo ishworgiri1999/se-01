@@ -8,12 +8,11 @@ import Login from "./Login";
 import Signup from "./Signup";
 import PlayerView from "./PlayerView";
 import InstructorView from "./InstructorView";
-import InstructorCreateGame from "./InstructorCreateGame";
-import PlayerCreateGame from "./PlayerCreateGame";
 import PlayerChooseRole from "./PlayerChooseRole";
 import PlayGameView from "./PlayGame";
 import GameEdit from "./GameEdit";
 import GameView from "./GameView";
+import CreateGame from "./CreateGame";
 
 
 /**
@@ -52,12 +51,9 @@ class App extends Component {
                     <InstructorView />
                   </Route>
 
-                  <Route exact path="/instructor/creategame">
-                    <InstructorCreateGame />
-                  </Route>
-
-                  <Route exact path="/player/creategame">
-                    <PlayerCreateGame />
+                 
+                  <Route exact path="/creategame">
+                    <CreateGame />
                   </Route>
 
                   <Route exact path="/play">
@@ -88,6 +84,9 @@ class App extends Component {
                   <Route exact path="/">
                     <HomePage />
                   </Route>
+                  <Route>
+                        <h1 > NO MATCH</h1>
+                 </Route>
                 </Switch>
               </div>
             </Router>

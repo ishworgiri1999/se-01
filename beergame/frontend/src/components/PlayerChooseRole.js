@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class PlayerChooseRole extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ export default class PlayerChooseRole extends Component {
                 Select Role
               </label>
             <select id="demandpattern" className="form-select" name="pattern" aria-label="Default select example">
-  <option selected>Open this select menu</option>
+  <option value="0">Open this select menu</option>
   <option value="1">Manufacturer</option>
   <option value="2">Distributor</option>
   <option value="3">Wholesaler</option>
@@ -31,11 +32,12 @@ export default class PlayerChooseRole extends Component {
 </div>
 
             <button type="submit" className="btn btn-primary">
-              Next
+              SUBMIT 
             </button>
+            button will not work click below for now.
           </form>
 
-          <a name="" id="" className="btn btn-primary" href="/play" role="button">Play Game</a>
+          <Link name="" id="" className="btn btn-primary" to="/play" role="button">Play Game</Link>
         
 
         </div>

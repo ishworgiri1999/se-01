@@ -28,9 +28,9 @@ Full Name              </label>
             </div>
 
             <div className="mb-3">
-              <div class="form-group">
-                <label for="selectroles">Choose Role</label>
-                <select multiple class="form-control" name="role" id="selectroles">
+              <div className="form-group">
+                <label htmlFor="selectroles">Choose Role</label>
+                <select multiple className="form-control" name="role" id="selectroles">
                   <option disabled> Choose Role</option>
                   <option>Instructor</option>
                   <option>Player </option>
